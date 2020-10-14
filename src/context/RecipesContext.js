@@ -11,6 +11,9 @@ export const RecipesState = ({ children }) => {
     const [error, setError] = useState(false);
     const [loading, setLoading] = useState(false);
 
+    const APP_ID ="919a9d19";
+    const APP_KEY = "370b87026149f014efaae07078e219bc";
+
     return(
         <RecipesContext.Provider value={( )}>
             {children}
