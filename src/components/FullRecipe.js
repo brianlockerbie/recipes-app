@@ -5,6 +5,7 @@ import Container from "./resuableComponents/Container";
 
 const FullRecipe = () => {
   const { recipes } = useContext(RecipesContext);
+  const { id } = useParams();
 
   return (
     <section className="fullRecipe">
