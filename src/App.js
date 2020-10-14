@@ -1,7 +1,8 @@
 import React from "react";
 import { RecipesState } from "./context/RecipesContext";
 import { BrowswerRouter as Router, Route } from "react-router-dom";
-import Nav from './components/Nav';
+import Nav from "./components/Nav";
+import Hero from './components/Hero';
 import "./App.css";
 
 const App = () => {
@@ -9,6 +10,7 @@ const App = () => {
     <RecipesState>
       <Router>
         <Nav />
+        <Route exact path="/" componenet={Hero} />
       </Router>
     </RecipesState> 
   );
