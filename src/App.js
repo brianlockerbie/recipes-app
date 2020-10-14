@@ -1,11 +1,13 @@
-import React from 'react';
-import './App.css';
+import React from "react";
+import { BrowswerRouter as Router, Route } from "react-router-dom";
+import Nav from './components/Nav';
+import "./App.css";
 
 const App = () => {
   return (
-    <div className="App">
-      <h1>Welcome</h1>
-    </div>
+    <Router>
+      <Nav />
+    </Router>
   );
 };
 
