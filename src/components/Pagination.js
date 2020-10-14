@@ -9,8 +9,8 @@ const Pagination = () => {
     <>
       {isHidden && !loading && !error && (
         <div className="pagination">
-          <Button />
-          <Button />
+          <Button btnText="Prev" handleClick={() => handlePage("previous")} />
+          <Button btnText="Next" handleClick={() => handlePage("next")} />
         </div>
       )}
     </>

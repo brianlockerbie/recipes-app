@@ -45,6 +45,18 @@ export const RecipesState = ({ children }) => {
     searchRecipes();
   };
 
+  const handlePage = (direction) => {
+    if (direction === "next") {
+      setFirstRecipe((prevRecipe) => prevRecipe + 9);
+      setLastRecipe((prevRecipe) => prevRecipe + 9);
+      return;
+    }
+    if (direction === "previous" && firstRecipe !== 0)
+      setFirstRecipe((prevRecipe) => prevRecipe - 9);
+      setLastRecipe((prevRecipe) => prevRecipe - 9);
+    }
+  };
+
   //  useEffect(() => {
   //  getFirstResult();  
   //  }, []);
