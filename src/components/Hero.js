@@ -4,6 +4,7 @@ import Container from "./reusableComponents/Container";
 import Loader from "./reusableComponents/Loader";
 import Search from "./Search";
 import Recipes from "./Recipes";
+import Pagination from "./Pagination";
 
 const Hero = () => {
   const { loading } = useContext(RecipesContext);
@@ -20,6 +21,7 @@ const Hero = () => {
           <Container>
               <Recipes />
           </Container>
+          <Pagination />
         </>
       )}
     </section> 

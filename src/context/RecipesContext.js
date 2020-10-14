@@ -72,6 +72,7 @@ export const RecipesState = ({ children }) => {
         isHidden,
         error,
         loading,
+        handlePage,
       }}
     >
       {children}

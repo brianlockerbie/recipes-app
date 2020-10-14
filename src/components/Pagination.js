@@ -3,7 +3,7 @@ import { RecipesContext } from "../context/RecipesContext";
 import Button from "./reuseableComponents/Buttons";
 
 const Pagination = () => {
-  const { isHidden, error, loading } = useContext(RecipesContext);
+  const { isHidden, error, loading, handlePage } = useContext(RecipesContext);
 
   return (
     <>
