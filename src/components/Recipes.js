@@ -1,6 +1,6 @@
 import React from "react";
-import { RecipesContext } from '../cpmtext/RecipesContext';
-import { Link } from 'react-router-dom';
+import { RecipesContext } from "../context/RecipesContext";
+import { Link } from "react-router-dom";
 
 const Recipes = () => {
   const { recipes, error, loading } = useContext(RecipesContext);
@@ -20,7 +20,7 @@ const Recipes = () => {
             >
               <div
                 style={{
-                  background: `url(${recipe.recipe.image}) no=repeat center/cover`,
+                  background: `url(${recipe.recipe.image}) no-repeat center/cover`,
                 }}
                 className="recipeBg"
               ></div>
@@ -28,6 +28,7 @@ const Recipes = () => {
             <div classNAme="recipeInfo">
               <p>{recipe.recipe.label}</p>
               <p>{Math.floor(recipe.recipe.calories)} calories</p>
+              <Link to="/">View more</Link>
             </div>
           </div>
         ))}

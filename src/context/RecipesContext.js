@@ -11,7 +11,7 @@ export const RecipesState = ({ children }) => {
   const [error, setError] = useState(false);
   const [loading, setLoading] = useState(false);
 
-  const APP_ID ="919a9d19";
+  const APP_ID = "919a9d19";
   const APP_KEY = "370b87026149f014efaae07078e219bc";
   const FIRST_REQ = `https://cors-anywhere.herokuapp.com/https://api.edamam.com/search?q=pizza&app_id=${APP_ID}&app_key=${APP_KEY}&from=0&to=9`;
   const URL = `https://cors-anywhere.herokuapp.com/https://api.edamam.com/search?q=${search}&app_id=${APP_ID}&app_key=${APP_KEY}&from=${firstRecipe}&to=${lastRecipe}`;
@@ -20,7 +20,7 @@ export const RecipesState = ({ children }) => {
     setLoading(true);
     const response = await fetch(FIRST_REQ);
     const data = await response.json();
-    setRecipes(data);
+    setRecipes(data.hits);
     setLoading(false);
   };
 
@@ -46,8 +46,8 @@ export const RecipesState = ({ children }) => {
   };
 
   //  useEffect(() => {
-  //    getFirstResult();  
-  //  }, [])
+  //  getFirstResult();  
+  //  }, []);
     
   return (
     <RecipesContext.Provider
