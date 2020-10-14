@@ -1,13 +1,14 @@
 import React from "react";
 import { RecipesContext } from "../context/RecipesContext";
 import { Link } from "react-router-dom";
+import ErrorMsg from "./ErrorMsg";
 
 const Recipes = () => {
   const { recipes, error, loading } = useContext(RecipesContext);
 
   return (
     <>
-      {error && <h1>Error...</h1>}
+      {error && <ErrorMsg />}
       {recipes && 
         !error && 
         !loading && 
@@ -25,7 +26,7 @@ const Recipes = () => {
                 className="recipeBg"
               ></div>
             </a>
-            <div classNAme="recipeInfo">
+            <div className="recipeInfo">
               <p>{recipe.recipe.label}</p>
               <p>{Math.floor(recipe.recipe.calories)} calories</p>
               <Link to="/">View more</Link>
