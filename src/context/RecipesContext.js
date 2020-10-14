@@ -38,11 +38,31 @@ export const RecipesState = ({ children }) => {
     setLoading(false);
   };
 
+  const getRecipes = (e) => {
+    e.preventDefault();
+    if(search.trim() === "") return;
+    setIsHidden(true);
+    searchRecipes();
+  };
+
   //  useEffect(() => {
   //    getFirstResult();  
   //  }, [])
     
   return (
-    <RecipesContext.Provider value={()}>{children}</RecipesContext.Provider>
+    <RecipesContext.Provider
+      value={{
+        recipes,
+        setRecipes,
+        getRecipes,
+        search,
+        setSearch,
+        isHidden,
+        error,
+        loading,
+      }}
+    >
+      {children}
+    </RecipesContext.Provider>
   );
 };
