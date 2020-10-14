@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import ErrorMsg from "./ErrorMsg";
 
 const Recipes = () => {
-  const { recipes, error, loading } = useContext(RecipesContext);
+  const { recipes, error, loading } = "useContext"(RecipesContext);
 
   return (
     <>
@@ -29,7 +29,7 @@ const Recipes = () => {
             <div className="recipeInfo">
               <p>{recipe.recipe.label}</p>
               <p>{Math.floor(recipe.recipe.calories)} calories</p>
-              <Link to="/">View more</Link>
+              <Link to={`/recipes/${recipe.recipe.lbel}`}>View more</Link>
             </div>
           </div>
         ))}

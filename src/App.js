@@ -1,6 +1,6 @@
 import React from "react";
 import { RecipesState } from "./context/RecipesContext";
-import { BrowswerRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import Nav from "./components/Nav";
 import Hero from './components/Hero';
 import "./App.css";

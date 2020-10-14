@@ -29,7 +29,7 @@ export const RecipesState = ({ children }) => {
     setLoading(true);
     const response = await fetch(URL);
     const data = await response.json();
-    if (search.trim() === "" && !data.more) {
+    if (search.trim() !== "" && !data.more) {
       setLoading(false);
       setError(true);
       return;
@@ -57,13 +57,13 @@ export const RecipesState = ({ children }) => {
     }
   };
 
-  useEffect(() => {
-    getFirstResult();  
-  }, []);
+  //useEffect(() => {
+  //  getFirstResult();  
+  //}, []);
 
-  useEffect(() => {
-    searchRecipes();
-  }, [firstRecipe, lastRecipe])
+  //useEffect(() => {
+  //  searchRecipes();
+  //}, [firstRecipe, lastRecipe]);
     
   return (
     <RecipesContext.Provider
@@ -81,5 +81,6 @@ export const RecipesState = ({ children }) => {
     >
       {children}
     </RecipesContext.Provider>
-  );
-};
+  };
+
+
