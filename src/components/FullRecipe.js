@@ -9,7 +9,16 @@ const FullRecipe = () => {
 
   return (
     <section className="fullRecipe">
-      <Container></Container>
+      <Container>
+          {recipes && recipes
+          .filter((recipeData) => recipeData.recipe.label === id)
+          .map((recipeData, index) => (
+              <div key={index} classNAme="fullRecipeCard">
+                   <div className="fullRecipeBg"></div> 
+              </div>
+          ))
+          }
+      </Container>
     </section>
   );
 };
