@@ -57,9 +57,13 @@ export const RecipesState = ({ children }) => {
     }
   };
 
-  //  useEffect(() => {
-  //  getFirstResult();  
-  //  }, []);
+  useEffect(() => {
+    getFirstResult();  
+  }, []);
+
+  useEffect(() => {
+    searchRecipes();
+  }, [firstRecipe, lastRecipe])
     
   return (
     <RecipesContext.Provider
