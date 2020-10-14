@@ -13,6 +13,15 @@ const Hero = () => {
       <Container>
         <Search />
       </Container>
+      {loading ? (
+        <Loader />
+      ) : (
+        <>
+          <Container>
+              <Recipes />
+          </Container>
+        </>
+      )}
     </section> 
   );
 };
