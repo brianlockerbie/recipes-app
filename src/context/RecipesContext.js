@@ -51,19 +51,19 @@ export const RecipesState = ({ children }) => {
       setLastRecipe((prevRecipe) => prevRecipe + 9);
       return;
     }
-    if (direction === "previous" && firstRecipe !== 0)
+    if (direction === "previous" && firstRecipe !== 0) {
       setFirstRecipe((prevRecipe) => prevRecipe - 9);
       setLastRecipe((prevRecipe) => prevRecipe - 9);
     }
   };
 
-  //useEffect(() => {
-  //  getFirstResult();  
-  //}, []);
+  useEffect(() => {
+    getFirstResult();  
+  }, []);
 
-  //useEffect(() => {
-  //  searchRecipes();
-  //}, [firstRecipe, lastRecipe]);
+  useEffect(() => {
+    searchRecipes();
+  }, [firstRecipe, lastRecipe]);
     
   return (
     <RecipesContext.Provider
@@ -81,6 +81,7 @@ export const RecipesState = ({ children }) => {
     >
       {children}
     </RecipesContext.Provider>
-  };
+  );
+};
 
 

@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { useParams } from "react-reouter-dom";
 import { RecipesContext } from "../context/RecipesContext";
-import Container from "./resuableComponents/Container";
+import Container from "./reusableComponents/Container";
 
 const FullRecipe = () => {
   const { recipes } = useContext(RecipesContext);
@@ -10,14 +10,29 @@ const FullRecipe = () => {
   return (
     <section className="fullRecipe">
       <Container>
-          {recipes && recipes
-          .filter((recipeData) => recipeData.recipe.label === id)
-          .map((recipeData, index) => (
+        {recipes && 
+          recipes
+            .filter((recipeData) => recipeData.recipe.label === id)
+            .map((recipeData, index) => (
               <div key={index} classNAme="fullRecipeCard">
-                   <div className="fullRecipeBg"></div> 
+                <div
+                  style={{
+                    background: `url(${recipeData.recipe.image}) no-repeat center/cover`,
+                  }}   
+                  className="fullRecipeBg"
+                ></div>
+                <div className="fullRecipeInfo">
+                  <h2>{recipeData.recipe.label}</h2>
+                  {recipeData.recipe.ingreditentLines.map(
+                    (ingredient, index) => (
+                      <ul key={index}>
+                        <li>{ingredient}</li>
+                      </ul>
+                    )
+                  )}
+                </div>
               </div>
-          ))
-          }
+          ))}
       </Container>
     </section>
   );

@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { RecipesContext } from "../context/RecipesContext";
-import Button from "./reuseableComponents/Button";
+import Button from "./reusableComponents/Button";
 
 const Search = () => {
   const { search, setSearch, getRecipes } = useContext(RecipesContext);
