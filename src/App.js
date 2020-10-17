@@ -11,7 +11,7 @@ const App = () => {
     <RecipesState>
       <Router>
         <Nav />
-        <Route exact path="/" componenet={Hero} />
+        <Route exact path="/" component={Hero} />
         <Route path="/recipes/:id" component={FullRecipe} />
       </Router>
     </RecipesState> 

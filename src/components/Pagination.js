@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { RecipesContext } from "../context/RecipesContext";
-import Button from "./reusableComponents/Buttons";
+import Button from "./reusableComponents/Button";
 
 const Pagination = () => {
   const { isHidden, error, loading, handlePage } = useContext(RecipesContext);

@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { useParams } from "react-reouter-dom";
+import { useParams } from "react-router-dom";
 import { RecipesContext } from "../context/RecipesContext";
 import Container from "./reusableComponents/Container";
 
@@ -14,7 +14,7 @@ const FullRecipe = () => {
           recipes
             .filter((recipeData) => recipeData.recipe.label === id)
             .map((recipeData, index) => (
-              <div key={index} classNAme="fullRecipeCard">
+              <div key={index} className="fullRecipeCard">
                 <div
                   style={{
                     background: `url(${recipeData.recipe.image}) no-repeat center/cover`,

@@ -10,12 +10,12 @@ const Search = () => {
       <div className="formContainer">
         <input 
           type="text"
-          requiredvalue={search}
+          value={search}
           onChange={(e) => setSearch(e.target.value)}
         />
         <label>Recipe / Ingredient</label>
       </div>
-      <Button  btnText="Search" />
+      <Button btnText="Search" />
     </form>
   );
 };

@@ -1,10 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import { RecipesContext } from "../context/RecipesContext";
 import { Link } from "react-router-dom";
 import ErrorMsg from "./ErrorMsg";
 
 const Recipes = () => {
-  const { recipes, error, loading } = "useContext"(RecipesContext);
+  const { recipes, error, loading } = useContext(RecipesContext);
 
   return (
     <>
