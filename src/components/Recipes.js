@@ -9,9 +9,9 @@ const Recipes = () => {
   return (
     <>
       {error && <ErrorMsg />}
-      {recipes && 
-        !error && 
-        !loading && 
+      {recipes &&
+        !error &&
+        !loading &&
         recipes.map((recipe, index) => (
           <div key={index} className="recipe">
             <a
