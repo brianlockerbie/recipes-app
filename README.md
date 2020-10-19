@@ -2,7 +2,7 @@
 
 <p align="center">Recipe App</p>
 
-## 🕹 Live Demo: https://image-app.netlify.app/
+## 🕹 Live Demo: https://reacts-recipes-app.netlify.app/
 
 
 ## 🎮 How to use
