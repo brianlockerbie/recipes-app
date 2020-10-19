@@ -10,7 +10,7 @@ const FullRecipe = () => {
   return (
     <section className="fullRecipe">
       <Container>
-        {recipes && 
+        {recipes &&
           recipes
             .filter((recipeData) => recipeData.recipe.label === id)
             .map((recipeData, index) => (
@@ -18,12 +18,12 @@ const FullRecipe = () => {
                 <div
                   style={{
                     background: `url(${recipeData.recipe.image}) no-repeat center/cover`,
-                  }}   
+                  }}
                   className="fullRecipeBg"
                 ></div>
                 <div className="fullRecipeInfo">
                   <h2>{recipeData.recipe.label}</h2>
-                  {recipeData.recipe.ingreditentLines.map(
+                  {recipeData.recipe.ingredientLines.map(
                     (ingredient, index) => (
                       <ul key={index}>
                         <li>{ingredient}</li>
@@ -32,7 +32,7 @@ const FullRecipe = () => {
                   )}
                 </div>
               </div>
-          ))}
+            ))}
       </Container>
     </section>
   );

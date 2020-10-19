@@ -29,7 +29,7 @@ const Recipes = () => {
             <div className="recipeInfo">
               <p>{recipe.recipe.label}</p>
               <p>{Math.floor(recipe.recipe.calories)} calories</p>
-              <Link to={`/recipes/${recipe.recipe.lbel}`}>View more</Link>
+              <Link to={`/recipes/${recipe.recipe.label}`}>View more</Link>
             </div>
           </div>
         ))}
